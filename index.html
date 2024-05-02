@@ -11,41 +11,97 @@
 
   <body>
     <h1>Digitales Rezeptbuch</h1>
-    <div class="header-container">
-      <div>
+    <div class="wrapper">
+      <div class="header-container">
+        <div class="text-container">
           <h2>Hallo Familie Rose,</h2>
-          <h2>Du hast ein neues Rezept und möchtest es mit deinen Familienmitgliedern teilen? Dann los!
-
-          </h2>
+          <h2>Du hast ein neues Rezept und möchtest es mit deinen Familienmitgliedern teilen? Dann los!</h2>
+        </div>
+        <div class="image-container" >
+          <img class="recipe-image" src="https://i.pinimg.com/564x/93/10/14/931014d8e72841cf1cef6b2942e68322.jpg" alt="Bild" />
+        </div>
       </div>
-      <img class="recipe-image" src="https://i.pinimg.com/564x/93/10/14/931014d8e72841cf1cef6b2942e68322.jpg" alt="Bild" /> <!-- Das Foto wird hier platziert -->
+    </div>
+
+    <div class="extra-button-container">
+      <button id="extra-button">Neu hinzufügen
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+      </button> <!-- Ein- und Ausklapp-Button -->
+    </div>
+  <div class="form-container" id="formContainer">
+    <div class="input-container">
+      <div class="flex-col">
+        <span>Wie heißt dein Rezept?</span>
+        <input type="text" id="recipe-name" name="recipe-name">
+      </div>
+      <!-- <button type="button" id="addName">Name hinzufügen</button> -->
+    </div>
+    <div class="input-container">
+      <div class="flex-col">
+        <span>Welche Zutaten werden für das Rezept benötigt?</span>
+        <textarea id="recipe-ingredient" name="recipe-ingredient"></textarea>
+      </div>
+      <!-- <button type="button" id="addIngredient">Zutat hinzufügen</button> -->
+      <div id="ingredient-list"></div>
+    </div>
+    <div class="input-container">
+      <div class="flex-col">
+        <span>Wie wird es zubereitet?</span>
+        <textarea id="recipe-preparation" name="recipe-preparation"></textarea>
+      </div>
+      <!-- <button type="button" id="addPreparation">Zubereitung hinzufügen</button> -->
+    </div>
+    <!-- <div class="input-container">
+      <div class="flex-col">
+        <span>Foto hinzufügen</span>
+        <input type="file" id="recipe-image" name="recipe-image">
+      </div> -->
+    <!-- </div> -->
+    <div class="input-container">
+      <div class="flex-col">
+        <span>Wie lange dauert die Zubereitung?</span>
+        <input type="number" id="recipe-time" name="recipe-time" placeholder="Zeit in Minuten...">
+      </div>
+      <!-- <button type="button" id="addRecipetime">Zubereitungsdauer hinzufügen</button> -->
+    </div>
+    <button type="button" id="addRecipe">Rezept hinzufügen
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+    </button> 
   </div>
   
-
-<form id="recipe-form"> 
-  <label for="recipe-name">Wie heißt dein Rezept?</label><br>
-        <input type="text" id="recipe-name" name="recipe-name"><br><br>
-<button type="button" onclick="addRecipe()">Name hinzufügen</button>
-</form>
-   
-    <form id="recipe-form"> 
-      <label for="recipe-ingredients">Welche Zutaten werden für das Rezept benötigt?</label><br>
-            <input type="text" id="recipe-ingredients" name="recipe-ingredients"><br><br>
-    <button type="button" onclick="addIngredients()">Zutat hinzufügen</button>
-    <ul id="ingredient-list"></ul>
-    </form>
-    <form id="recipe-form"> 
-      <label for="recipe-preparation">Wie wird es zubereitet?</label><br>
-            <input type="text" id="recipe-preparation" name="recipe-preparation"><br><br>
-    <button type="button" onclick="addPreparation()">Zubereitung hinzufügen</button>
-    </form>
-
-   
-    <form>
-    <label for="recipe-image">Foto hinzufügen</label><br>
-        <input type="file" id="recipe-image" name="recipe-image"><br><br>
-
-        <button type="button" onclick="addRecipe()">Rezept hinzufügen</button>
-    </form>
+  
+  <h2>Gespeicherte Rezepte</h2>
+  <div class="saved-recipe" id="recipeListContainer">
+    <!-- <ul class="recipe-list">
+        <li class="recipe-item">
+            <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
+            <div>
+                <h3 class="recipe-name">Spaghetti Bolognese</h3>
+                <p class="recipe-duration">Zubereitungsdauer: 30 Minuten</p>
+            </div>
+        </li>
+        <li class="recipe-item">
+            <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
+            <div>
+                <h3 class="recipe-name">Chicken Curry</h3>
+                <p class="recipe-duration">Zubereitungsdauer: 45 Minuten</p>
+            </div>
+        </li>
+        <li class="recipe-item">
+          <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
+          <div>
+              <h3 class="recipe-name">Chicken Curry</h3>
+              <p class="recipe-duration">Zubereitungsdauer: 45 Minuten</p>
+          </div>
+      </li>
+      <li class="recipe-item">
+        <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
+        <div>
+            <h3 class="recipe-name">Spaghetti Bolognese</h3>
+            <p class="recipe-duration">Zubereitungsdauer: 30 Minuten</p>
+          </div>
+        </li>
+    </ul> -->
+  </div>
   </body>
 </html>
