@@ -3,14 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Digitales Rezeptbuch</title>
     <!--ACHTUNG - DAS GEHT NUR WEGEN VITE! IN "ECHT" KANN KEIN TS IM BROWSER AUSGEFÜHRT WERDEN -->
     <script defer type="module" src="/src/index.ts"></script>
+    <link rel="stylesheet" href= "./src/styles/styles.css"/>
   </head>
 
   <body>
-    <img class="small-image" src="/jslogo.png" alt="JavaScript Logo" />
-    <label for="myInput">Type something:</label>
-    <input name="myInput " type="text" id="myInput" />
+    <h1>Digitales Rezeptbuch</h1>
+    <div class="header-container">
+      <div>
+          <h2>Hallo Familie Rose,</h2>
+          <h2>Du hast ein neues Rezept und möchtest es mit deinen Familienmitgliedern teilen? Dann los!
+
+          </h2>
+      </div>
+      <img class="recipe-image" src="https://i.pinimg.com/564x/93/10/14/931014d8e72841cf1cef6b2942e68322.jpg" alt="Bild" /> <!-- Das Foto wird hier platziert -->
+  </div>
+  
+
+<form id="recipe-form"> 
+  <label for="recipe-name">Wie heißt dein Rezept?</label><br>
+        <input type="text" id="recipe-name" name="recipe-name"><br><br>
+<button type="button" onclick="addRecipe()">Name hinzufügen</button>
+</form>
+   
+    <form id="recipe-form"> 
+      <label for="recipe-ingredients">Welche Zutaten werden für das Rezept benötigt?</label><br>
+            <input type="text" id="recipe-ingredients" name="recipe-ingredients"><br><br>
+    <button type="button" onclick="addIngredients()">Zutat hinzufügen</button>
+    <ul id="ingredient-list"></ul>
+    </form>
+    <form id="recipe-form"> 
+      <label for="recipe-preparation">Wie wird es zubereitet?</label><br>
+            <input type="text" id="recipe-preparation" name="recipe-preparation"><br><br>
+    <button type="button" onclick="addPreparation()">Zubereitung hinzufügen</button>
+    </form>
+
+   
+    <form>
+    <label for="recipe-image">Foto hinzufügen</label><br>
+        <input type="file" id="recipe-image" name="recipe-image"><br><br>
+
+        <button type="button" onclick="addRecipe()">Rezept hinzufügen</button>
+    </form>
   </body>
 </html>

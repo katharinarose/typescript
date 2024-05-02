@@ -1,7 +1,7 @@
 {
   "name": "typescript-assignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Prerequisites",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,5 +13,6 @@
   "devDependencies": {
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  }
+  },
+  "main": "index.js"
 }
