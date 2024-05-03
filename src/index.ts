@@ -4,6 +4,7 @@ import { addFormularBtn, addRecipeButton, formContainer, recipeIngredientsTextar
 import './styles/styles.css';
 const formContainerElement = document.getElementById('form-container');
 
+
 //if (toggleButton && divContainer)
 addFormularBtn.addEventListener("click", () => {
   formContainer.style.display="block"; 
@@ -11,28 +12,52 @@ addFormularBtn.addEventListener("click", () => {
 //addRecipeButton.addEventListener("click", ()=>{
   //const recipeName = recipeNameInput.value;
 //});
-addRecipeButton.addEventListener("click", () => {
+// addRecipeButton.addEventListener("click", () => {
+//   const recipeName = recipeNameInput.value;
+//   const recipeIngredients = recipeIngredientsTextarea.value;
+//   const recipePreparation = recipePreparationTextarea.value;
+//   const recipeTime = Number(recipeTimeInput.value);
+//   const id = new Date().getTime();
+//   addRecipe({id: id, title: recipeName, preparation: recipePreparation, recipeTime: recipeTime, ingredients: recipeIngredients});
+//   recipeList();
+// });
+
+// addRecipeButton.addEventListener('click', () => {
+    
+//     formContainer.style.display = 'none';
+
+//     recipeNameInput.value = '';
+//     recipeIngredientsTextarea.value = '';
+//     recipePreparationTextarea.value = '';
+//     recipeTimeInput.value = '';
+// });
+
+
+
+addRecipeButton.addEventListener('click', () => {
   const recipeName = recipeNameInput.value;
   const recipeIngredients = recipeIngredientsTextarea.value;
   const recipePreparation = recipePreparationTextarea.value;
   const recipeTime = Number(recipeTimeInput.value);
-  const id = new Date().getTime();
-  addRecipe({id: id, title: recipeName, preparation: recipePreparation, recipeTime: recipeTime, ingredients: recipeIngredients});
-  recipeList();
+  const id = new Date().getTime(); 
+
+  if (!recipeName || !recipeIngredients || !recipePreparation || !recipeTime) {
+      
+    alert('Bitte fülle alle Felder aus!');
+      
+  }
+  else {
+    addRecipe({id: id, title: recipeName, preparation: recipePreparation, recipeTime: recipeTime, ingredients: recipeIngredients});
+    recipeList();
+  }
+
+  formContainer.style.display = 'none';
+
+  recipeNameInput.value = '';
+  recipeIngredientsTextarea.value = '';
+  recipePreparationTextarea.value = '';
+  recipeTimeInput.value = '';
 });
-
-addRecipeButton.addEventListener('click', () => {
-    
-    formContainer.style.display = 'none';
-
-    recipeNameInput.value = '';
-    recipeIngredientsTextarea.value = '';
-    recipePreparationTextarea.value = '';
-    recipeTimeInput.value = '';
-});
-
-
-
 
 const recipeList = () => {
   const allRecipes: Recipe[] = getAllRecipes();
