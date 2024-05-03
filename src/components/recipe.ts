@@ -1,8 +1,9 @@
 export type Recipe = {
+
     id: number;
     title: string;
     preparation: string;
-    preparationTime: number;
+    recipeTime: number;
     ingredients: string;
 }
 

@@ -17,9 +17,22 @@ addRecipeButton.addEventListener("click", () => {
   const recipePreparation = recipePreparationTextarea.value;
   const recipeTime = Number(recipeTimeInput.value);
   const id = new Date().getTime();
-  addRecipe({id: id, title: recipeName, preparation: recipePreparation, preparationTime: recipeTime, ingredients: recipeIngredients});
+  addRecipe({id: id, title: recipeName, preparation: recipePreparation, recipeTime: recipeTime, ingredients: recipeIngredients});
   recipeList();
 });
+
+addRecipeButton.addEventListener('click', () => {
+    
+    formContainer.style.display = 'none';
+
+    recipeNameInput.value = '';
+    recipeIngredientsTextarea.value = '';
+    recipePreparationTextarea.value = '';
+    recipeTimeInput.value = '';
+});
+
+
+
 
 const recipeList = () => {
   const allRecipes: Recipe[] = getAllRecipes();
@@ -33,13 +46,26 @@ const recipeList = () => {
     const recipeIngredients = document.createElement("p");
     recipeIngredients.className = "recipeIngredients";
     recipeIngredients.textContent = recipe.ingredients;
+    const recipePreparation = document.createElement("p");
+    recipePreparation.className = "recipePreparation";
+    recipePreparation.textContent = recipe.preparation;
+    const recipeTime = document.createElement("p");
+    recipeTime.className = "recipeTime";
+    recipeTime.textContent = `Gesamtdauer: ${recipe.recipeTime} min`; 
 
+   
     recipeContainer.appendChild(recipeTitle);
     recipeContainer.appendChild(recipeIngredients);
+    recipeContainer.appendChild(recipePreparation);
+    recipeContainer.appendChild(recipeTime);
+    
 
     recipeListContainer.appendChild(recipeContainer);
+    
 
     
   }
 }
 recipeList();
+
+

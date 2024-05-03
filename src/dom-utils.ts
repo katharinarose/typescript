@@ -3,9 +3,11 @@
 //export const toggleButton = document.querySelector('toggle-form') as HTMLButtonElement;
 export const addFormularBtn = document.querySelector('#extra-button') as HTMLDivElement;
 export const formContainer = document.querySelector('#formContainer') as HTMLDivElement;
+
 //export const recipeNameInput = document.getElementById('recipe-name') as HTMLInputElement;
 //export const recipeIngredientInput = document.getElementById('recipe-ingredient') as HTMLInputElement;
 
+// export const outputDiv = document.querySelector('#output-div') as HTMLDivElement;
 export const addRecipeButton = document.querySelector('#addRecipe') as HTMLButtonElement;
 export const recipeNameInput = document.querySelector('#recipe-name') as HTMLInputElement;
 export const recipeIngredientsTextarea = document.querySelector('#recipe-ingredient') as HTMLTextAreaElement;

@@ -26,7 +26,7 @@
     <div class="extra-button-container">
       <button id="extra-button">Neu hinzufügen
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-      </button> <!-- Ein- und Ausklapp-Button -->
+      </button> <!-- Ausklapp-Button -->
     </div>
   <div class="form-container" id="formContainer">
     <div class="input-container">
@@ -39,7 +39,7 @@
     <div class="input-container">
       <div class="flex-col">
         <span>Welche Zutaten werden für das Rezept benötigt?</span>
-        <textarea id="recipe-ingredient" name="recipe-ingredient"></textarea>
+        <textarea id="recipe-ingredient" name="recipe-ingredient" placeholder="Schreibe untereinander..."></textarea>
       </div>
       <!-- <button type="button" id="addIngredient">Zutat hinzufügen</button> -->
       <div id="ingredient-list"></div>
@@ -47,7 +47,7 @@
     <div class="input-container">
       <div class="flex-col">
         <span>Wie wird es zubereitet?</span>
-        <textarea id="recipe-preparation" name="recipe-preparation"></textarea>
+        <textarea id="recipe-preparation" name="recipe-preparation" placeholder="Erkläre deine Schritte nacheinander..."></textarea>
       </div>
       <!-- <button type="button" id="addPreparation">Zubereitung hinzufügen</button> -->
     </div>
@@ -64,44 +64,18 @@
       </div>
       <!-- <button type="button" id="addRecipetime">Zubereitungsdauer hinzufügen</button> -->
     </div>
-    <button type="button" id="addRecipe">Rezept hinzufügen
+    <div id="errorMessages" class="error-message"></div>
+    <button id="addRecipe">Rezept hinzufügen
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
     </button> 
   </div>
   
-  
-  <h2>Gespeicherte Rezepte</h2>
+  <div class="saved-container"> 
+  <h3>Gespeicherte Rezepte</h3>
   <div class="saved-recipe" id="recipeListContainer">
-    <!-- <ul class="recipe-list">
-        <li class="recipe-item">
-            <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
-            <div>
-                <h3 class="recipe-name">Spaghetti Bolognese</h3>
-                <p class="recipe-duration">Zubereitungsdauer: 30 Minuten</p>
-            </div>
-        </li>
-        <li class="recipe-item">
-            <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
-            <div>
-                <h3 class="recipe-name">Chicken Curry</h3>
-                <p class="recipe-duration">Zubereitungsdauer: 45 Minuten</p>
-            </div>
-        </li>
-        <li class="recipe-item">
-          <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
-          <div>
-              <h3 class="recipe-name">Chicken Curry</h3>
-              <p class="recipe-duration">Zubereitungsdauer: 45 Minuten</p>
-          </div>
-      </li>
-      <li class="recipe-item">
-        <img class="recipe-image" src="rezeptbild.jpg" alt="Rezeptbild" />
-        <div>
-            <h3 class="recipe-name">Spaghetti Bolognese</h3>
-            <p class="recipe-duration">Zubereitungsdauer: 30 Minuten</p>
-          </div>
-        </li>
-    </ul> -->
+     <!-- <div id="output-div"></div> Hier wird der formatierte Text angezeigt -->
   </div>
+  </div>
+
   </body>
 </html>
