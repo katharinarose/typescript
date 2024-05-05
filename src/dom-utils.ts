@@ -13,5 +13,4 @@ export const recipeNameInput = document.querySelector('#recipe-name') as HTMLInp
 export const recipeIngredientsTextarea = document.querySelector('#recipe-ingredient') as HTMLTextAreaElement;
 export const recipePreparationTextarea = document.querySelector('#recipe-preparation') as HTMLTextAreaElement;
 export const recipeTimeInput = document.querySelector('#recipe-time') as HTMLInputElement;
-
 export const recipeListContainer = document.querySelector('#recipeListContainer') as HTMLDivElement;

@@ -181,14 +181,27 @@ svg {
     align-items: center; 
     
 }
+.recipeIngredients {
+    word-break: break-all;
+    white-space: pre-line;
+    justify-content: left;
+    display: flex;
+}
 .saved-recipe { 
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
     width: 100%; 
     max-width: 1150px;
+    
+}
+.ingredientContainer {
+    text-align: left;
 
+}
+.preparationContainer {
+    text-align: left;
 }
 .recipeItem {
 
@@ -218,9 +231,11 @@ svg {
     margin-bottom: 10px; 
 }
 
-.recipe-duration {
+.recipe-time {
     font-size: 16px; 
+    font-weight: bold;
     color: #666; 
+
 }
 .error-message {
     color: red;
@@ -240,4 +255,15 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.speaktextBtn {
+    background-color: transparent;
+    border: 3px solid #276648;
+    color: black;
+    font-size: 12px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 6px;
+    margin-top: 8px;
+    cursor: pointer;
 }
