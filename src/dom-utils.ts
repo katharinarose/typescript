@@ -14,3 +14,4 @@ export const recipeIngredientsTextarea = document.querySelector('#recipe-ingredi
 export const recipePreparationTextarea = document.querySelector('#recipe-preparation') as HTMLTextAreaElement;
 export const recipeTimeInput = document.querySelector('#recipe-time') as HTMLInputElement;
 export const recipeListContainer = document.querySelector('#recipeListContainer') as HTMLDivElement;
+export const deleteButton = document.querySelector('#deleteButton') as HTMLButtonElement;

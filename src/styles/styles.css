@@ -76,9 +76,8 @@ h2 {
    
 .input-container {
     text-align: left; 
-    margin: 15px;
-    
-
+    margin: 10px;
+   
 }
 
 
@@ -101,7 +100,6 @@ input[type="text"], input[type="file"], input[type="number"], textarea {
     font-family: 'Arial', sans-serif; 
     font-size: 18px; 
 }
-
 
 button {
     padding: 12px 20px; 
@@ -159,6 +157,10 @@ svg {
     border: 3px solid white;
     color: white;
     border-radius: 5px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    
 }
 #addRecipe:hover {
     background-color: rgba(0, 255, 0, 0.1);
@@ -179,7 +181,7 @@ svg {
     width: 65%;
     display: flex;
     align-items: center; 
-    
+     
 }
 .recipeIngredients {
     word-break: break-all;
@@ -216,6 +218,7 @@ svg {
     text-align: center;
     display: block;
     overflow: auto;
+    position: relative;
 }
 .recipeTitle {
     font-size: 24px;
@@ -228,19 +231,18 @@ svg {
 .recipe-name {
     font-size: 20px; 
     color: #333; 
-    margin-bottom: 10px; 
+    
 }
-
+.recipe-preparation {
+    font-size: 16px; 
+    color: #666; 
+    margin: 10px;
+}
 .recipe-time {
     font-size: 16px; 
-    font-weight: bold;
-    color: #666; 
-
+    color: #666;    
 }
-.error-message {
-    color: red;
-    font-size: 14px;
-  }
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -266,4 +268,17 @@ h3 {
     padding: 6px;
     margin-top: 8px;
     cursor: pointer;
+}
+.speaktextBtn:hover {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.deleteButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    
+}
+.timeContainer {
+    font-weight: bold;
 }

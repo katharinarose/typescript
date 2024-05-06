@@ -1,6 +1,6 @@
 import { speakText } from './components/WebSpeech';
-import { Recipe, addRecipe, getAllRecipes } from './components/recipe';
-import { addFormularBtn, addRecipeButton, formContainer, recipeIngredientsTextarea, recipeListContainer, recipeNameInput, recipePreparationTextarea, recipeTimeInput} from './dom-utils';
+import { Recipe, addRecipe, getAllRecipes, removeRecipe } from './components/recipe';
+import { addFormularBtn, addRecipeButton, deleteButton, formContainer, recipeIngredientsTextarea, recipeListContainer, recipeNameInput, recipePreparationTextarea, recipeTimeInput} from './dom-utils';
 // CSS IMPORT IN TS NUR ÜBER VITE MÖGLICH
 import './styles/styles.css';
 const formContainerElement = document.getElementById('form-container');
@@ -46,6 +46,9 @@ const recipeList = () => {
     const recipeTitle = document.createElement("h4");
     recipeTitle.className = "recipeTitle";
     recipeTitle.textContent = recipe.title;
+    const deleteButton = document.createElement("div");
+    deleteButton.className = "deleteButton";
+    deleteButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>`;
     const textToSpeakBtn = document.createElement("div");
     textToSpeakBtn.className = "speaktextBtn";
     textToSpeakBtn.textContent = "vorlesen";
@@ -65,17 +68,19 @@ const recipeList = () => {
     recipeTime.className = "recipeTime";
     recipeTime.textContent = `Gesamtdauer: ${recipe.recipeTime} min`; 
 
+  
+
     titleContainer.appendChild(recipeTitle);
     titleContainer.appendChild(textToSpeakBtn);
     recipeContainer.appendChild(titleContainer);
     ingredientContainer.appendChild(recipeIngredients);
     recipeContainer.appendChild(ingredientContainer);
+    recipeContainer.appendChild(deleteButton);
     preparationContainer.appendChild(recipePreparation);
     recipeContainer.appendChild(preparationContainer);
     timeContainer.appendChild(recipeTime);
     recipeContainer.appendChild(timeContainer);
     
-
     recipeListContainer.appendChild(recipeContainer);
     
     textToSpeakBtn.onclick = () => {
@@ -87,7 +92,12 @@ const recipeList = () => {
       speakText(text);
     }
     
+    deleteButton.onclick = () => {
+      removeRecipe(recipe.id);
+      recipeList();
+    }
   }
 }
 recipeList();
+
 

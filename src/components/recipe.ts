@@ -1,5 +1,5 @@
 export type Recipe = {
-
+    
     id: number;
     title: string;
     preparation: string;
@@ -23,3 +23,11 @@ export const getAllRecipes = () : Recipe[] => {
     }
     else return [];
 }
+export const removeRecipe = (id: number) => {
+    const allRecipes = getAllRecipes();
+    if (allRecipes) {
+        const remainingRecipes = allRecipes.filter((recipe: {id: number}) => recipe.id !== id);
+        localStorage.setItem("recipes", JSON.stringify(remainingRecipes));
+    }
+}
+     
