@@ -4,37 +4,46 @@
 }
 
 body {
-        font-family: 'Helvetica', sans-serif; 
+        font-family: "arial"; 
         font-size: 16px; 
         background-color: #F5F5F5;
-    
-}
-h1 {
-    font-size: 50px; 
-    font-family: 'Helvetica', sans-serif; 
-    color: black;  
-    text-align: center; 
-    margin-top: 30px; 
-    margin-bottom: 20px; 
-}
-h2 {
-    font-size: 40px;
-    font-family: 'Helvetica', sans-serif; 
-    color: black; 
-    margin-top: 30px; 
-    margin-bottom: 20px;
 
+}
+
+h2 {
+    color: black; 
+    font-size: 40px; 
+    font-family: "Arial";
+    color: black;
+    margin-top: 50px; 
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial";
+    font-weight: lighter;
+}
+h4 {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial";
+    font-weight: bold;
 }
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1050px; 
+    max-width: 1000px; 
     margin: 0 auto; 
 }
 .wrapper img {
     width: 350px;
-    height: autopx;
+    height: 350px;
 }
   
 .header-container {
@@ -46,43 +55,37 @@ h2 {
   width: 80%;
 
 }
-
 .image-container {
-    width: 300px; 
-    height: 300px;
+    width: 350px; 
+    height: 350px;
   
 }
-
-h2 {
-    font-size: 28px; 
-    font-family: "DIN Alternate";
-    color: black;
-    
-}
-
 .form-container {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Arial";
     font-size: large;
     font-style: normal;
     color: #f5f5f5;
-    background-color: #276648; 
+    background-color: #3a6443; 
     padding: 20px; 
-    border-radius: 5px; 
-    width: 95%; 
-    max-width: 800px; 
+    border-radius: 7px; 
+    width: 90%; 
+    max-width: 750px; 
     margin: 0 auto; 
     display: none;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    
 }
    
 .input-container {
     text-align: left; 
     margin: 10px;
-   
+    padding-left: 30px;
+    width:780px;
+    height: auto;
 }
 
-
 .recipe-image {
-    width: 250px; 
+    width: 300px; 
     height: auto; 
     border-radius: 10px; 
     margin-left: 5px; 
@@ -95,48 +98,33 @@ input[type="text"], input[type="file"], input[type="number"], textarea {
     padding: 15px; 
     border: 1px solid #ccc;
     border-radius: 3px; 
-    margin-bottom: 20px; 
-    margin-top: 10px; 
-    font-family: 'Arial', sans-serif; 
+    margin-bottom: 25px; 
+    margin-top: 12px; 
+    font-family: "arial"; 
     font-size: 18px; 
 }
 
 button {
-    padding: 12px 20px; 
-    border-radius: 10px; 
-    background-color: #6c757d; 
-    color: white;
-    font-size: 16px; 
-    cursor: pointer;
-    transition: background-color 0.3s ease; 
-    margin-bottom: 20px; 
-    font-family: 'Arial', sans-serif; 
-}
-
-button:hover {
-    background-color: darkgray; 
-}
-
-button {
-    padding: 12px 20px; 
+    padding: 9px 15px; 
     border: none;
-    border-radius: 10px; 
+    border-radius: 7px; 
     background-color: grey; 
     color: white;
     font-size: 16px; 
     cursor: pointer;
     transition: background-color 0.3s ease; 
-    margin-bottom: 20px; 
-    font-family: 'Arial', sans-serif; 
+    margin-bottom: 25px; 
+    font-family: "Arial"; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-
 }
+
 svg {
-    height: 18px;
-    width: 18px;
+    height: 25px;
+    width: 20px;
+    padding-left: 4px;
 }
 .extra-button-container {
     display: flex;
@@ -150,20 +138,19 @@ svg {
     border-radius: 5px;
 }
 #extra-button:hover {
-    background-color: rgba(0, 255, 0, 0.1);
+    background-color: rgba(20, 73, 24, 0.206);
 }
 #addRecipe {
     background-color: transparent;
     border: 3px solid white;
     color: white;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 40px;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
 }
 #addRecipe:hover {
-    background-color: rgba(0, 255, 0, 0.1);
+    background-color: rgba(20, 73, 24, 0.344);
 }
 .recipe-image {
     width: 200px; 
@@ -181,7 +168,7 @@ svg {
     width: 65%;
     display: flex;
     align-items: center; 
-     
+      
 }
 .recipeIngredients {
     word-break: break-all;
@@ -196,7 +183,7 @@ svg {
     margin: auto;
     width: 100%; 
     max-width: 1150px;
-    
+   
 }
 .ingredientContainer {
     text-align: left;
@@ -209,25 +196,25 @@ svg {
 
     width: 300px; 
     height: 400px;
-    border: 3px solid #ccc; 
+    border: 5px solid #ccc; 
     border-color: #276648;
     padding: 20px; 
     border-radius: 5px; 
     background-color: #fff; 
-    margin: 15px;
+    margin: 10px;
     text-align: center;
     display: block;
     overflow: auto;
     position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 .recipeTitle {
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     align-items: center;
     margin: 0;
     padding: 0;
 }
-
 .recipe-name {
     font-size: 20px; 
     color: #333; 
@@ -236,28 +223,20 @@ svg {
 .recipe-preparation {
     font-size: 16px; 
     color: #666; 
-    margin: 10px;
-}
-.recipe-time {
-    font-size: 16px; 
-    color: #666;    
+    margin:0;
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
-}
+    margin: auto;
 
+}
 .flex-col {
     display: flex;
     flex-direction: column;
 }
-h3 {
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .speaktextBtn {
     background-color: transparent;
     border: 3px solid #276648;
@@ -270,14 +249,13 @@ h3 {
     cursor: pointer;
 }
 .speaktextBtn:hover {
-    background-color: rgba(0, 255, 0, 0.1);
+    background-color: rgba(20, 73, 24, 0.206);
 }
 
 .deleteButton {
     position: absolute;
     top: 8px;
-    right: 8px;
-    
+    right: 8px;   
 }
 .timeContainer {
     font-weight: bold;
